@@ -1,0 +1,40 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:id="@+id/linearLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        
+        
+        <EditText 
+	        android:layout_width="fill_parent" 
+	        android:id="@+id/e_add_contacts_name" 
+	        android:layout_height="0dip" 
+	        android:layout_weight="10" 
+	        android:inputType="textPersonName">
+            <requestFocus></requestFocus>
+        </EditText>
+        <EditText 
+	        android:layout_width="fill_parent"
+	        android:id="@+id/e_add_contacts_phone" 
+	        android:layout_height="0dip"
+	        android:layout_weight="10" 
+	        android:inputType="phone">
+        </EditText>
+        <EditText 
+	         android:layout_width="fill_parent"
+	         android:id="@+id/e_add_contacts_email" 
+	         android:layout_height="0dip" 
+	         android:layout_weight="10" 
+	         android:inputType="textEmailAddress">
+         </EditText>
+        <LinearLayout 
+	        android:layout_width="fill_parent" 
+	        android:id="@+id/linearLayout2" 
+	        android:layout_height="0dip" 
+	        android:layout_weight="10" 
+	        android:orientation="vertical">
+            <Button 
+	            android:text="Button" 
+	            android:id="@+id/b_add_contacts_add" 
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
