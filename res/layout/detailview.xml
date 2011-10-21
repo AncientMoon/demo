@@ -21,13 +21,13 @@
 		android:layout_weight="10" 
 		android:orientation="horizontal">
 		<Button 
-			android:text="Button" 
+			android:text="Edit" 
 			android:id="@+id/b_detailview_edit" 
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content">
 		</Button>
 		<Button 
-			android:text="Button" 
+			android:text="Delete" 
 			android:id="@+id/b_detailview_delete" 
 			android:layout_width="wrap_content" 
 			android:layout_height="wrap_content">

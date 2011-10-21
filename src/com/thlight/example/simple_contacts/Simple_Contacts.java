@@ -34,7 +34,7 @@ public class Simple_Contacts extends Activity
 	ArrayList<People> mlist = new ArrayList();
 	private String[] mNameArray = null;
 	private Button mBtnAddContact = null;
-	
+	private Button mBtnDeleteContact = null;
 	private static final int PICK_CONTACT = 3;
     /** Called when the activity is first created. */
     @Override
@@ -44,7 +44,31 @@ public class Simple_Contacts extends Activity
         setContentView(R.layout.main);
         mListview = (ListView)findViewById(R.id.listView1);
         mBtnAddContact = (Button)findViewById(R.id.b_simple_contacts_add);
-        Cursor cursor= getContentResolver().query(Contacts.CONTENT_URI, null, null, null, null); 
+        
+        mBtnAddContact.setOnClickListener(new Button.OnClickListener()
+    	{
+            public void onClick(View v)
+            {
+            	try {
+        			Intent intent = new Intent();
+        			intent.setClass(Simple_Contacts.this, AddContact.class);
+        			startActivity(intent);
+        		} catch (Throwable e) {
+        			// TODO Auto-generated catch block
+        			e.printStackTrace();
+        		}
+          	}        	
+    	});
+       
+        
+
+    }
+    protected void onResume()
+    {
+    	super.onResume();
+    	if(mlist!=null)
+    		mlist.clear();
+    	Cursor cursor= getContentResolver().query(Contacts.CONTENT_URI, null, null, null, null); 
         while (cursor.moveToNext()) 
         { 
         	   People people = new People();
@@ -67,7 +91,7 @@ public class Simple_Contacts extends Activity
 	    	      { 
 	    	         String phoneNumber = phones.getString(phones.getColumnIndex( ContactsContract.CommonDataKinds.Phone.NUMBER));                 
 	    	         people.setCell(phoneNumber);
-	    	         Log.i(TAG,phoneNumber);
+	    	       //  Log.i(TAG,phoneNumber);
 	    	      } 
 	    	      
 	    	      phones.close(); 
@@ -112,23 +136,8 @@ public class Simple_Contacts extends Activity
                 
                 
         });
-        mBtnAddContact.setOnClickListener(new Button.OnClickListener()
-    	{
-            public void onClick(View v)
-            {
-            	try {
-        			Intent intent = new Intent();
-        			intent.setClass(Simple_Contacts.this, AddContact.class);
-        			startActivity(intent);
-        		} catch (Throwable e) {
-        			// TODO Auto-generated catch block
-        			e.printStackTrace();
-        		}
-          	}        	
-    	});
-        
-
+        cursor.close();
     }
-
+    
 
 }

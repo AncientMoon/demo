@@ -4,26 +4,20 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<<<<<<< HEAD
-<ListView 
-	android:layout_height="0dip"
-	android:id="@+id/listView1" 
-	android:layout_width="fill_parent"
-	android:layout_weight="90">
-</ListView>
-<LinearLayout 
-	android:layout_width="fill_parent" 
-	android:id="@+id/linearLayout1" 
-	android:layout_height="0dip" 
-	android:layout_weight="10" 
-	android:orientation="vertical">
-    <Button android:text="Button" android:id="@+id/b_simple_contacts_add" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-</LinearLayout>
-=======
-<TextView  
-    android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" 
-    android:text="@string/hello"
-    />
->>>>>>> 1410ffd907596ceec7b2f366b92ebeb519b39bba
+
+	<ListView 
+		android:layout_height="0dip"
+		android:id="@+id/listView1" 
+		android:layout_width="fill_parent"
+		android:layout_weight="90">
+	</ListView>
+	<LinearLayout 
+		android:layout_width="fill_parent" 
+		android:id="@+id/linearLayout1" 
+		android:layout_height="0dip" 
+		android:layout_weight="10" android:orientation="horizontal">
+		<Button android:text="Add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/b_simple_contacts_add"></Button>
+		
+	</LinearLayout>
+
 </LinearLayout>
