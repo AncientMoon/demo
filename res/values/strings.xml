@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <string name="hello">Hello World, Simple_ContactsActivity!</string>
     <string name="app_name">Simple_Contacts</string>
+=======
+    <string name="hello">Hello World, DemoActivity!</string>
+    <string name="app_name">Demo</string>
+>>>>>>> 1410ffd907596ceec7b2f366b92ebeb519b39bba
 </resources>
